@@ -1,0 +1,148 @@
+{
+  "brand_identity": {
+    "name": "Vasudha Skin and Hair Clinic",
+    "location": "Visakhapatnam, India",
+    "tone": "Organic & Earthy mixed with Editorial Elegance. Premium, welcoming, trusting medical science, spa-like but medical.",
+    "archetype": "ORGANIC & EARTHY (Archetype 1) combined with SWISS/EDITORIAL"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cormorant Garamond",
+      "body": "Manrope"
+    },
+    "scales": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none font-light",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "h4": "text-lg sm:text-xl",
+      "body": "text-base leading-relaxed",
+      "label": "text-xs tracking-[0.2em] uppercase font-semibold"
+    },
+    "rules": [
+      "No generic sans (Inter/Roboto) for headings. Use Cormorant Garamond.",
+      "Never center align default text, prioritize optical asymmetry.",
+      "Headings over 32px MUST use tracking-tighter."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "base_bg": "#FAF9F6",
+      "surface": "#FFFFFF",
+      "primary": "#E8785A",
+      "primary_hover": "#D66648",
+      "secondary": "#6B8E7B",
+      "accent_gold": "#C5A880",
+      "text_primary": "#1A1A1A",
+      "text_secondary": "#4A4A4A",
+      "border": "#E5E0D8"
+    },
+    "rules": [
+      "Dominant Light Theme.",
+      "The 'Tinted Grey' Rule: No pure black or gray; always use warm undertones.",
+      "Avoid large gradients; rely on textures and negative space.",
+      "Forbidden colors: #7351B7 (AI purple), #1B93A4 (Teal)."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": {
+      "header": "Crystal Glass variant: backdrop-blur-xl bg-white/70 with 1px delicate inner stroke border-white/40.",
+      "cards": "Solid warm white background with 1px border (#E5E0D8), no heavy shadows. Hover: Slight lift (-translate-y-1) and shadow-lg.",
+      "buttons": "Pill-shaped (rounded-full) for primary CTAs in Coral. Hover adds saturation and slight scale."
+    },
+    "overlays": "Hero images must use bg-black/30 or bg-white/20 maximum. Do not obliterate image visibility."
+  },
+  "grids_and_layouts": {
+    "spacing_scale": "p-4, p-8, p-12, p-16, p-24, p-32. Use 2-3x typical spacing for 'breathing room'.",
+    "bento_grid": "For Services: 'Tetris' Grid (grid-cols-1 md:grid-cols-8 lg:grid-cols-12 with wide gap-8 to gap-12). High density (grid-cols-1 md:grid-cols-3) for Admin Dashboard.",
+    "alignment": "Mobile-first. Use optical alignment over geometric alignment."
+  },
+  "motion_and_interactions": {
+    "libraries": ["framer-motion", "lenis", "react-fast-marquee"],
+    "hero_reveal": "Kinetic hero with a signature masked line-by-line on-load reveal using framer-motion.",
+    "scrolling": "Lenis momentum scrolling is mandatory for premium feel.",
+    "parallax": "Subtle parallax moment for background/hero images using Framer Motion.",
+    "marquee": "Slow editorial marquee/ribbon (Serif font, pale bg, dark text, tracking wide) for clinic highlights.",
+    "micro_interactions": "Purposeful scroll-reveals. Hover states on all interactive elements (buttons, service cards)."
+  },
+  "3d_and_creative_libraries": {
+    "decision": "No heavy 3D (R3F) needed for this local clinic to maintain trust and load speed, but use Framer Motion 3D for subtle card flips/reveals if needed, and react-fast-marquee for the editorial ribbon.",
+    "libraries_to_install": "framer-motion, @studio-freight/react-lenis, react-fast-marquee"
+  },
+  "components_usage": {
+    "custom": [
+      "Marketing Sections",
+      "Hero Sections",
+      "Editorial Doctor Profile"
+    ],
+    "shadcn": [
+      "Forms (Enquiry Form, Contact)",
+      "Dialogs",
+      "Tables (Admin Dashboard)",
+      "Tabs",
+      "Inputs/Selects"
+    ],
+    "rules": [
+      "Do NOT use HTML native components for advanced interactions.",
+      "Use sonner for toast notifications.",
+      "Never use full transparent background for headers/dropdowns."
+    ]
+  },
+  "accessibility": {
+    "contrast": "Minimum 4.5:1 for normal text. Use text shadows if over images.",
+    "motion": "Respect prefers-reduced-motion.",
+    "focus": "Focus states must have higher contrast.",
+    "testing": "All interactive elements MUST include a 'data-testid' attribute (e.g., data-testid='appointment-cta-button')."
+  },
+  "pages_structure": {
+    "Home": "Kinetic Hero with CTA, Masked Reveal, Marquee for highlights, Intro, Services Grid preview, Book Appointment CTA.",
+    "About": "Doctor Profile (Dr. Vasudha Varada) with Photo, Editorial Layout, Qualifications List, Clinic Story.",
+    "Services": "Bento Grid of Services (Acne, Hair Fall, Laser, PRP, etc.).",
+    "Contact": "Address, Map Embed, Enquiry Form, Contact Details.",
+    "Admin_Dashboard": "High density grid layout for Enquiry Management and Service Editor. Functional, Shadcn-heavy."
+  },
+  "media": {
+    "icons": "Use @phosphor-icons/react (Duotone weight for marketing) or lucide-react.",
+    "image_urls": [
+      {
+        "url": "https://images.pexels.com/photos/16571735/pexels-photo-16571735.jpeg",
+        "category": "Hero Section / Clinic Interior",
+        "description": "Sleek contemporary clinic room, sets a premium spa-like but medical tone."
+      },
+      {
+        "url": "https://images.pexels.com/photos/8183906/pexels-photo-8183906.jpeg",
+        "category": "Services / Skin Care highlight",
+        "description": "Close-up of healthy skin portrait, perfect for dermatological treatment highlights."
+      },
+      {
+        "url": "https://images.pexels.com/photos/17126290/pexels-photo-17126290.jpeg",
+        "category": "Services / Hair & Skin highlight",
+        "description": "Portrait showing beautiful hair and clear skin, suitable for PRP / Hair therapy section."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1659353888906-adb3e0041693?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmZW1hbGUlMjBkb2N0b3IlMjBzbWlsaW5nJTIwd2hpdGUlMjBjb2F0fGVufDB8fHx8MTc4MzQ3NjA0NHww&ixlib=rb-4.1.0&q=85",
+        "category": "About Page / Doctor Profile",
+        "description": "Indian female doctor in white coat for Dr. Vasudha Varada profile."
+      }
+    ]
+  },
+  "instructions_to_main_agent": {
+    "setup": "Install framer-motion, @studio-freight/react-lenis, react-fast-marquee, @phosphor-icons/react, sonner. Avoid raw HTML for complex components, use Shadcn.",
+    "execution": "Build the site using pure HTML/Tailwind for layout structure (bento grids, overlaps), Shadcn for interactive logic. Ensure mobile-responsiveness and data-testid on every interactive element.",
+    "styling": "Enforce generous spacing (p-12 to p-24). Implement the Lenis scroll and Framer Motion reveals as requested. DO NOT center-everything.",
+    "whatsapp_float": "Implement a fixed bottom-right floating WhatsApp button."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid generic 'AI slop' aesthetics. Do not use generic centered layouts or simplistic gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container (.App { text-align: center; } is banned).",
+    "Always use modern button styles (pill-shaped or sharp) with interaction animations.",
+    "NEVER use AI assistant Emoji characters (🤖🧠💭💡) for icons.",
+    "Every interaction needs micro-animations (hover states, parallax).",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Never use placeholder text for images or logos; rely on the provided image URLs.",
+    "Prioritize using pre-existing components from src/components/ui.",
+    "Use 'sonner' for toasts."
+  ]
+}

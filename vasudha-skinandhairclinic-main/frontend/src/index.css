@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 29% 97%;
+    --foreground: 28 18% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 28 18% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 28 18% 14%;
+    --primary: 13 75% 63%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 132 17% 94%;
+    --secondary-foreground: 28 18% 14%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 32 10% 38%;
+    --accent: 18 71% 94%;
+    --accent-foreground: 28 18% 14%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 37 20% 87%;
+    --input: 37 20% 87%;
+    --ring: 13 75% 63%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  ::selection {
+    background: #e8785a;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-gold-dark;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-coral px-7 py-3.5 text-sm font-semibold text-white transition-[background-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-coral-dark hover:shadow-lg hover:shadow-coral/25;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-white/70 px-7 py-3.5 text-sm font-semibold text-ink transition-[border-color,background-color,transform] duration-200 hover:-translate-y-0.5 hover:border-ink hover:bg-white;
+  }
+}
+
+.btn-glow {
+  animation: btn-glow 2.6s ease-in-out infinite;
+}
+
+.btn-glow:hover {
+  animation-play-state: paused;
+}
+
+@keyframes btn-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(232, 120, 90, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 9px rgba(232, 120, 90, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-glow {
+    animation: none;
+  }
+}
